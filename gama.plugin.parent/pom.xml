@@ -21,8 +21,12 @@
 
     <!-- ── Modules: add one entry per plugin/feature in this repo ── -->
     <modules>
-        <module>../MY_PLUGIN</module>
-        <module>../MY_PLUGIN.feature</module>
+        <module>../gama.plugin.gaming</module>
+        <module>../gama.plugin.feature.gaming</module>
+        <module>../gama.plugin.camisole</module>
+        <module>../gama.plugin.feature.camisole</module>
+        <module>../gama.plugin.remote.gui</module>
+        <module>../gama.plugin.feature.remote.gui</module>
         <module>../gama.plugin.p2updatesite</module>
     </modules>
 
