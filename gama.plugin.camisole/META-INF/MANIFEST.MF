@@ -3,11 +3,11 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Camisole
 Bundle-SymbolicName: gama.plugin.camisole;singleton:=true
 Bundle-Vendor: UMMISCO
-Bundle-Version: 2025.6.0.qualifier
-Bundle-RequiredExecutionEnvironment: JavaSE-21
-Require-Bundle: gama.core,
- gama.dependencies,
- gama.extension.physics;bundle-version="0.0.0"
+Bundle-Version: 2026.6.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-25
+Require-Bundle: gama.core,gama.dependencies,
+ gama.extension.physics;bundle-version="0.0.0",gama.annotations,
+ gama.processor,gama.api
 Bundle-ClassPath: .,
  lib/ssj-3.1.0.jar,
  lib/colt-1.2.0.jar

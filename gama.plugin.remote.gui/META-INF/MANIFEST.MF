@@ -3,9 +3,8 @@ Bundle-ManifestVersion: 2
 Bundle-Name: remote_GUI
 Bundle-SymbolicName: gama.plugin.remote.gui;singleton:=true
 Bundle-Vendor: UMMISCO - IRD
-Bundle-Version: 2025.6.0.qualifier
-Require-Bundle: gama.extension.network,
- gama.core,
- gama.extension.serialize,
- gama.dependencies
+Bundle-Version: 2026.6.0.qualifier
+Require-Bundle: gama.extension.network,gama.core,
+ gama.extension.serialize,gama.dependencies,gama.annotations,
+ gama.processor,gama.api
 Automatic-Module-Name: gama.plugin.remote.gui
