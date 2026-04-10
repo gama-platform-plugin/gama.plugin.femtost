@@ -15,11 +15,11 @@ package gama.plugin.apsf.spaces;
 import java.util.Enumeration;
 import java.util.Hashtable;
 
+import gama.api.runtime.scope.IScope;
 import gama.plugin.apsf.exception.APSFException;
 import gama.plugin.apsf.exception.AlreadyCreatedParticle;
 import gama.plugin.apsf.exception.UnBreakableParticle;
 import gama.plugin.apsf.template.Template;
-import gama.core.runtime.IScope;
 
 public class Agglomerate extends Particle {
 

@@ -1,25 +1,24 @@
 package gama.plugin.camisole.skills;
 
+import gama.annotations.doc;
+import gama.annotations.getter;
+import gama.annotations.setter;
+import gama.annotations.skill;
+import gama.annotations.variable;
+import gama.annotations.vars;
+import gama.annotations.constants.IKeyword;
+import gama.annotations.support.IConcept;
+import gama.api.gaml.types.IType;
+import gama.api.gaml.types.Types;
+import gama.api.kernel.agent.IAgent;
+import gama.api.kernel.skill.Skill;
+import gama.api.runtime.scope.IScope;
+import gama.api.types.geometry.GamaPoint;
+import gama.api.types.geometry.GamaPointFactory;
+import gama.api.types.list.GamaListFactory;
+import gama.api.types.list.IList;
 import gama.plugin.apsf.spaces.Particle;
 import gama.plugin.apsf.spaces.SoilLocation;
-
-
-import gama.annotations.precompiler.GamlAnnotations.doc;
-import gama.annotations.precompiler.GamlAnnotations.getter;
-import gama.annotations.precompiler.GamlAnnotations.setter;
-import gama.annotations.precompiler.GamlAnnotations.skill;
-import gama.annotations.precompiler.GamlAnnotations.variable;
-import gama.annotations.precompiler.GamlAnnotations.vars;
-import gama.annotations.precompiler.IConcept;
-import gama.core.common.interfaces.IKeyword;
-import gama.core.metamodel.agent.IAgent;
-import gama.core.metamodel.shape.GamaPoint;
-import gama.core.runtime.IScope;
-import gama.core.util.GamaListFactory;
-import gama.core.util.IList;
-import gama.gaml.skills.Skill;
-import gama.gaml.types.IType;
-import gama.gaml.types.Types;
 
 @vars ({ @variable (
 		name = IApsfParticleSkill.FOLLOWED_PARTICLE_INT,
@@ -102,10 +101,10 @@ public class ApsfParticleSkill extends Skill {
 		if (p == null) { return null; }
 		final GamaPoint loc3D = p.getLocation().getAbsoluteCoordinate();
 		final IAgent agt = p.getWorld().getUnderworldAgent();
-		final GamaPoint lc = agt.getLocation();
+		final GamaPoint lc = (GamaPoint) agt.getLocation();
 		final double width = p.getWorld().getDimension() / 200;
 		final double sz = p.getAbsoluteSize() / 2;
-		return new GamaPoint((loc3D.x + sz) / 100.0 - width + lc.getX(), (loc3D.y + sz) / 100.0 - width + lc.getY(),
+		return (GamaPoint) GamaPointFactory.create((loc3D.x + sz) / 100.0 - width + lc.getX(), (loc3D.y + sz) / 100.0 - width + lc.getY(),
 				(loc3D.z + sz) / 100.0 - width + lc.getZ());
 	}
 

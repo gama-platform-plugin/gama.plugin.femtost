@@ -1,10 +1,10 @@
 package gama.plugin.camisole.types;
 
-import gama.annotations.precompiler.GamlAnnotations.getter;
-import gama.annotations.precompiler.GamlAnnotations.setter;
-import gama.annotations.precompiler.GamlAnnotations.variable;
-import gama.annotations.precompiler.GamlAnnotations.vars;
-import gama.gaml.types.IType;
+import gama.annotations.getter;
+import gama.annotations.setter;
+import gama.annotations.variable;
+import gama.annotations.vars;
+import gama.api.gaml.types.IType;
 
 @vars({
 	@variable(name="x", type=IType.INT),

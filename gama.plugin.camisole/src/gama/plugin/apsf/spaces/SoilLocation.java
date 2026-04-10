@@ -18,7 +18,8 @@
 */
 package gama.plugin.apsf.spaces;
 
-import gama.core.metamodel.shape.GamaPoint;
+import gama.api.types.geometry.GamaPoint;
+import gama.api.types.geometry.GamaPointFactory;
 
 public class SoilLocation {
 	public final static String SEPARATOR_LOCATION=":";
@@ -70,7 +71,7 @@ public class SoilLocation {
 		double fy=this.y/max*world.getDimension();
 		double fz=this.z/max*world.getDimension();
 
-		GamaPoint xyz=new GamaPoint(fx,fy,fz);
+		GamaPoint xyz= (GamaPoint) GamaPointFactory.create(fx,fy,fz);
 		return xyz;
 	}
 	

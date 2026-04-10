@@ -4,21 +4,21 @@ import java.util.ArrayList;
 
 import org.eclipse.paho.client.mqttv3.MqttException;
 
-import gama.plugin.remote.gui.connector.MQTTConnector;
-import gama.core.metamodel.agent.IAgent;
-import gama.annotations.precompiler.GamlAnnotations.action;
-import gama.annotations.precompiler.GamlAnnotations.arg;
-import gama.annotations.precompiler.GamlAnnotations.doc;
-import gama.annotations.precompiler.GamlAnnotations.example;
-import gama.annotations.precompiler.GamlAnnotations.skill;
-import gama.annotations.precompiler.GamlAnnotations.variable;
-import gama.annotations.precompiler.GamlAnnotations.vars;
-import gama.annotations.precompiler.IConcept;
-import gama.core.runtime.IScope;
+import gama.annotations.action;
+import gama.annotations.arg;
+import gama.annotations.doc;
+import gama.annotations.example;
+import gama.annotations.skill;
+import gama.annotations.variable;
+import gama.annotations.vars;
+import gama.annotations.support.IConcept;
+import gama.api.gaml.types.IType;
+import gama.api.kernel.agent.IAgent;
+import gama.api.kernel.skill.Skill;
+import gama.api.runtime.scope.IScope;
 import gama.dev.DEBUG;
-import gama.gaml.skills.Skill;
-import gama.gaml.types.IType;
 import gama.extension.network.skills.INetworkSkill;
+import gama.plugin.remote.gui.connector.MQTTConnector;
 
 @vars ({ @variable (
 		name = IRemoteGUISkill.NET_AGENT_NAME,

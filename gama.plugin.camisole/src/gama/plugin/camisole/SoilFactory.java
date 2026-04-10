@@ -2,9 +2,9 @@ package gama.plugin.camisole;
 
 import java.util.ArrayList;
 
+import gama.api.kernel.agent.IAgent;
 import gama.plugin.apsf.spaces.Apsf;
 import gama.plugin.apsf.template.SoilTemplate;
-import gama.core.metamodel.agent.IAgent;
 import umontreal.ssj.randvarmulti.DirichletGen;
 import umontreal.ssj.rng.GenF2w32;
 

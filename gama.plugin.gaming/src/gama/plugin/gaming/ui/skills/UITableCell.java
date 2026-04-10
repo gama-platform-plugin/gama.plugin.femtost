@@ -1,11 +1,11 @@
 package gama.plugin.gaming.ui.skills;
 
-import gama.annotations.precompiler.IConcept;
-import gama.annotations.precompiler.GamlAnnotations.doc;
-import gama.annotations.precompiler.GamlAnnotations.skill;
-import gama.annotations.precompiler.GamlAnnotations.variable;
-import gama.annotations.precompiler.GamlAnnotations.vars;
-import gama.gaml.types.IType;
+import gama.annotations.doc;
+import gama.annotations.skill;
+import gama.annotations.variable;
+import gama.annotations.vars;
+import gama.annotations.support.IConcept;
+import gama.api.gaml.types.IType;
 
 @vars({ @variable(name = IUILocatedSkill.AGENT_LOCATION, type = IType.POINT, doc = @doc("locked location")),
 	@variable(name = IUILocatedSkill.AGENT_LOCKED_WIDTH, type = IType.FLOAT, doc = @doc("locked width")),

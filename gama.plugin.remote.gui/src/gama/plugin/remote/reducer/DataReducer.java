@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import gama.core.util.IList;
-import gama.core.util.IMap;
+import gama.api.types.list.IList;
+import gama.api.types.map.IMap;
 
 public class DataReducer {
 	public static <T> ArrayList<T> castToList(final IList<T> mList) {

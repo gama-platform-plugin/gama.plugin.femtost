@@ -27,10 +27,10 @@ package gama.plugin.apsf.spaces;
 import java.util.ArrayList;
 import java.util.List;
 
+import gama.api.kernel.agent.IAgent;
+import gama.api.runtime.scope.IScope;
 import gama.plugin.apsf.exception.APSFException;
 import gama.plugin.apsf.exception.UnBreakableParticle;
-import gama.core.metamodel.agent.IAgent;
-import gama.core.runtime.IScope;
 
 /**
  * @author marilleauni

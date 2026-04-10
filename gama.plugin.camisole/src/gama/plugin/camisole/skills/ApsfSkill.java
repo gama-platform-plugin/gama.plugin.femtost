@@ -5,6 +5,21 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import gama.annotations.action;
+import gama.annotations.arg;
+import gama.annotations.doc;
+import gama.annotations.example;
+import gama.annotations.skill;
+import gama.annotations.variable;
+import gama.annotations.vars;
+import gama.annotations.support.IConcept;
+import gama.api.gaml.types.IType;
+import gama.api.kernel.agent.IAgent;
+import gama.api.kernel.skill.Skill;
+import gama.api.kernel.species.GamlSpecies;
+import gama.api.runtime.scope.IScope;
+import gama.api.types.list.GamaListFactory;
+import gama.api.types.list.IList;
 import gama.plugin.apsf.spaces.Agglomerate;
 import gama.plugin.apsf.spaces.Apsf;
 import gama.plugin.apsf.spaces.IParticle;
@@ -12,21 +27,6 @@ import gama.plugin.apsf.spaces.Particle;
 import gama.plugin.apsf.template.Template;
 import gama.plugin.camisole.InputData;
 import gama.plugin.camisole.SoilFactory;
-import gama.core.metamodel.agent.IAgent;
-import gama.annotations.precompiler.GamlAnnotations.action;
-import gama.annotations.precompiler.GamlAnnotations.arg;
-import gama.annotations.precompiler.GamlAnnotations.doc;
-import gama.annotations.precompiler.GamlAnnotations.example;
-import gama.annotations.precompiler.GamlAnnotations.skill;
-import gama.annotations.precompiler.GamlAnnotations.variable;
-import gama.annotations.precompiler.GamlAnnotations.vars;
-import gama.annotations.precompiler.IConcept;
-import gama.core.runtime.IScope;
-import gama.core.util.GamaListFactory;
-import gama.core.util.IList;
-import gama.gaml.skills.Skill;
-import gama.gaml.species.GamlSpecies;
-import gama.gaml.types.IType;
 
 @vars ({ @variable (
 		name = IApsfSkill.APSF_SOIL,
