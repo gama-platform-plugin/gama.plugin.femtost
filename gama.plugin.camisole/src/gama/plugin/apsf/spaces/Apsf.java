@@ -6,11 +6,11 @@ import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
 
+import gama.api.kernel.agent.IAgent;
+import gama.api.kernel.species.GamlSpecies;
+import gama.api.runtime.scope.IScope;
 import gama.plugin.apsf.exception.UnBreakableParticle;
 import gama.plugin.apsf.template.Template;
-import gama.core.metamodel.agent.IAgent;
-import gama.core.runtime.IScope;
-import gama.gaml.species.GamlSpecies;
 
 // les méthodes de cette classe sont inspirées du MicrobesEnvironnement de sworm
 

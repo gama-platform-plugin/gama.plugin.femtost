@@ -2,16 +2,16 @@ package gama.plugin.camisole.skills;
 
 import java.util.List;
 
+import gama.annotations.doc;
+import gama.annotations.getter;
+import gama.annotations.skill;
+import gama.annotations.variable;
+import gama.annotations.vars;
+import gama.annotations.support.IConcept;
+import gama.api.gaml.types.IType;
+import gama.api.kernel.agent.IAgent;
+import gama.api.kernel.skill.Skill;
 import gama.plugin.apsf.spaces.Particle;
-import gama.core.metamodel.agent.IAgent;
-import gama.annotations.precompiler.IConcept;
-import gama.annotations.precompiler.GamlAnnotations.doc;
-import gama.annotations.precompiler.GamlAnnotations.getter;
-import gama.annotations.precompiler.GamlAnnotations.skill;
-import gama.annotations.precompiler.GamlAnnotations.variable;
-import gama.annotations.precompiler.GamlAnnotations.vars;
-import gama.gaml.skills.Skill;
-import gama.gaml.types.IType;
 
 @vars({ 
 	@variable(name = IAPSFProcessSkill.FOLLOWED_PARTICLE_INT, type = IType.NONE, doc = @doc("followed particle in the soil")),

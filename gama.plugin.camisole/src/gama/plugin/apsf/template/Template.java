@@ -20,6 +20,10 @@ import java.util.Hashtable;
 import java.util.Map;
 import java.util.Vector;
 
+import gama.api.kernel.agent.IAgent;
+import gama.api.kernel.species.GamlSpecies;
+import gama.api.runtime.scope.IScope;
+import gama.api.types.list.IList;
 import gama.plugin.apsf.spaces.Agglomerate;
 import gama.plugin.apsf.spaces.Apsf;
 import gama.plugin.apsf.spaces.Particle;
@@ -27,10 +31,6 @@ import gama.plugin.apsf.spaces.SoilLocation;
 import gama.plugin.apsf.spaces.WhiteParticle;
 import gama.plugin.camisole.skills.IAPSFProcessSkill;
 import gama.plugin.camisole.skills.IApsfParticleSkill;
-import gama.core.metamodel.agent.IAgent;
-import gama.core.runtime.IScope;
-import gama.core.util.IList;
-import gama.gaml.species.GamlSpecies;
 
 public abstract class Template {
 

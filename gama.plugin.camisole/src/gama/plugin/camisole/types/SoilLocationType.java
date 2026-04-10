@@ -1,20 +1,26 @@
 package gama.plugin.camisole.types;
 
-import gama.annotations.precompiler.GamlAnnotations.type;
-import gama.annotations.precompiler.ISymbolKind;
-import gama.core.runtime.IScope;
-import gama.core.runtime.exceptions.GamaRuntimeException;
-import gama.core.util.IList;
-import gama.gaml.types.GamaType;
-import gama.gaml.types.IType;
-import gama.gaml.types.Types;
+import gama.annotations.type;
+import gama.annotations.support.ISymbolKind;
+import gama.api.exceptions.GamaRuntimeException;
+import gama.api.gaml.types.GamaType;
+import gama.api.gaml.types.IType;
+import gama.api.gaml.types.ITypesManager;
+import gama.api.gaml.types.Types;
+import gama.api.runtime.scope.IScope;
+import gama.api.types.list.IList;
 
 @type (
 		name = ISoilLocationType.TYPE_NAME,
 		id = SoilLocation.Id,
-		kind = ISymbolKind.Variable.REGULAR,
+		kind = ISymbolKind.REGULAR,
 		wraps = { SoilLocation.class })
 public class SoilLocationType extends GamaType<SoilLocation> {
+
+	public SoilLocationType(ITypesManager typesManager) {
+		super(typesManager);
+		// TODO Auto-generated constructor stub
+	}
 
 	@Override
 	public boolean canCastToConst() {

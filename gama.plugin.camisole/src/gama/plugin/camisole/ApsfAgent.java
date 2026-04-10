@@ -1,6 +1,6 @@
 package gama.plugin.camisole;
 
-import gama.gaml.skills.Skill;
+import gama.api.kernel.skill.Skill;
 
 public class ApsfAgent extends Skill{
 
