@@ -6,12 +6,12 @@ import java.util.Map;
 
 import org.eclipse.paho.client.mqttv3.MqttException;
 
+import gama.api.kernel.agent.IAgent;
+import gama.api.runtime.scope.IScope;
+import gama.api.types.list.IList;
+import gama.api.types.map.IMap;
 import gama.plugin.remote.gui.connector.MQTTConnector;
 import gama.plugin.remote.reducer.DataReducer;
-import gama.core.metamodel.agent.IAgent;
-import gama.core.runtime.IScope;
-import gama.core.util.IList;
-import gama.core.util.IMap;
 
 public class SharedVariable {
 	public final static int EXPOSED_VARIABLE = 1;
