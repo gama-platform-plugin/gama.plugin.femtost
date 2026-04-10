@@ -1,25 +1,26 @@
 package gama.plugin.gaming.ui.skills;
 
-import gama.annotations.precompiler.IConcept;
-import gama.core.runtime.IScope;
-
 import java.util.ArrayList;
 
-import gama.core.metamodel.agent.IAgent;
-import gama.core.metamodel.shape.GamaPoint;
-import gama.core.outputs.IOutput;
-import gama.core.outputs.LayeredDisplayOutput;
-import gama.annotations.precompiler.GamlAnnotations.action;
-import gama.annotations.precompiler.GamlAnnotations.arg;
-import gama.annotations.precompiler.GamlAnnotations.doc;
-import gama.annotations.precompiler.GamlAnnotations.example;
-import gama.annotations.precompiler.GamlAnnotations.skill; 
-import gama.annotations.precompiler.GamlAnnotations.variable;
-import gama.annotations.precompiler.GamlAnnotations.vars;
-import gama.gaml.skills.Skill;
-import gama.gaml.types.IType;
-
 import org.locationtech.jts.geom.Envelope;
+
+import gama.annotations.action;
+import gama.annotations.arg;
+import gama.annotations.doc;
+import gama.annotations.example;
+import gama.annotations.skill;
+import gama.annotations.variable;
+import gama.annotations.vars;
+import gama.annotations.support.IConcept;
+import gama.api.gaml.types.IType;
+import gama.api.kernel.agent.IAgent;
+import gama.api.kernel.skill.Skill;
+import gama.api.runtime.scope.IScope;
+import gama.api.types.geometry.GamaPoint;
+import gama.api.types.geometry.GamaPointFactory;
+import gama.api.ui.IOutput;
+import gama.api.utils.geometry.IEnvelope;
+import gama.core.outputs.LayeredDisplayOutput;
  
 @vars({ @variable(name = IUILocatedSkill.AGENT_LOCATION, type = IType.POINT, doc = @doc("locked location")),
 	@variable(name = IUILocatedSkill.AGENT_LOCKED_WIDTH, type = IType.FLOAT, doc = @doc("locked width")),
@@ -96,7 +97,7 @@ public class UILocatedSkill extends Skill {
 		LayeredDisplayOutput output = (LayeredDisplayOutput)out;
 		if(output.getSurface() == null)
 			return;
-		Envelope e = output.getSurface().getVisibleRegionForLayer(output.getSurface().getManager().getItems().get(0));
+		IEnvelope e = output.getSurface().getVisibleRegionForLayer(output.getSurface().getManager().getItems().get(0));
 		double xmin=Math.max(0,e.getMinX());
 		double ymin=Math.max(0,e.getMinY());
 		double xmax = Math.min(e.getMaxX(),output.getSurface().getEnvWidth());
@@ -106,7 +107,7 @@ public class UILocatedSkill extends Skill {
 		
 		double tui_width = (xmax - xmin) * ui_width;
 		double tui_height = (ymax - ymin) * ui_height;
-		GamaPoint loc = new GamaPoint(xx,yy);
+		GamaPoint loc = (GamaPoint) GamaPointFactory.create(xx,yy);
 		agt.setAttribute(IUILocatedSkill.AGENT_UI_WIDTH, tui_width);
 		agt.setAttribute(IUILocatedSkill.AGENT_UI_HEIGHT, tui_height);
 		agt.setLocation(loc);

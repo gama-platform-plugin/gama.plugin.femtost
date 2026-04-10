@@ -2,19 +2,20 @@ package gama.plugin.gaming.ui.skills;
 
 import java.util.ArrayList;
 
-import gama.core.metamodel.agent.IAgent;
-import gama.core.metamodel.shape.GamaPoint;
-import gama.annotations.precompiler.GamlAnnotations.action;
-import gama.annotations.precompiler.GamlAnnotations.arg;
-import gama.annotations.precompiler.GamlAnnotations.doc;
-import gama.annotations.precompiler.GamlAnnotations.example;
-import gama.annotations.precompiler.GamlAnnotations.skill;
-import gama.annotations.precompiler.GamlAnnotations.variable;
-import gama.annotations.precompiler.GamlAnnotations.vars;
-import gama.annotations.precompiler.IConcept;
-import gama.core.runtime.IScope;
-import gama.core.util.IList;
-import gama.gaml.types.IType;
+import gama.annotations.action;
+import gama.annotations.arg;
+import gama.annotations.doc;
+import gama.annotations.example;
+import gama.annotations.skill;
+import gama.annotations.variable;
+import gama.annotations.vars;
+import gama.annotations.support.IConcept;
+import gama.api.gaml.types.IType;
+import gama.api.kernel.agent.IAgent;
+import gama.api.runtime.scope.IScope;
+import gama.api.types.geometry.GamaPoint;
+import gama.api.types.geometry.GamaPointFactory;
+import gama.api.types.list.IList;
 
 @vars ({ @variable (
 		name = IUILocatedSkill.AGENT_LOCATION,
@@ -159,7 +160,7 @@ public class UITableSkill extends UILocatedSkill {
 		final int nbLines = ((Integer) agt.getAttribute(IUITableSkill.NUMBER_OF_LINES)).intValue();
 		final double x = pt.x + j * (ui_width / nbColumns);
 		final double y = pt.y + i * (ui_height / nbLines);
-		final GamaPoint res = new GamaPoint(x, y, 0);
+		final GamaPoint res = (GamaPoint) GamaPointFactory.create(x, y, 0);
 		return res;
 	}
 
